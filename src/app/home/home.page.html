@@ -1,20 +1,30 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Blank
+      Listado de perosnas responsive
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+<ion-content>
+  <ion-input [(ngModel)]="filtro" placeholder="Busqueda por País "></ion-input>
+  <ion-grid>
+    <ion-row>
+      <ng-container *ngFor="let user of users | async">
+      <ion-col *ngIf="filtro =='' || user.country.startsWith(filtro)" size-xl="2" size-lg="2" size-md="4" size-sm="6" sizer xs="12">
+        <ion-card>
+          <ion-card-content>
+          <ion-avatar>
+            <img [src]="user.avatar">
+          </ion-avatar>
+          <ion-card-title class="nombre"> {{user.first_name}} {{user.last_name}}</ion-card-title>
+          <h2 class="info">{{user.country}}</h2>
+          <h3 class=email >{{user.email}}</h3>
+          <p class="texto">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vitae purus non sapien finibus pharetra vitae id elit. Donec a ex at velit consectetur mattis at sed justo.</p>
+        </ion-card-content>
+      </ion-card>
+      </ion-col>
+      </ng-container>
+    </ion-row>
+  </ion-grid>
 </ion-content>

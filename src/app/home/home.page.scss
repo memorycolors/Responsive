@@ -25,3 +25,25 @@
 #container a {
   text-decoration: none;
 }
+
+ion-col{
+  --ion-background-color:#3491cf;
+  
+}
+ion-card-content{
+  .nombre{
+    color: rgb(255, 255, 255);
+  }
+  .texto{
+    color:white; 
+  }
+  .info{
+    color:rgb(158, 228, 79);
+  }
+  .email{
+    color:rgb(158, 228, 79);
+    align-content: center;
+  }
+
+
+}
