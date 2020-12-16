@@ -9,11 +9,11 @@ import {HttpClient} from '@angular/common/http';
 })
 export class HomePage {
 
-  users: any;
+ users: any;
   filtro: string='';
 
   constructor(private httpClient: HttpClient) {
-    this.users = this.httpClient.get('https://raw.githubusercontent.com/memorycolors/responsive/main/src/data/MOCK_DATA%20.json');
+    this.users = this.httpClient.get('https://raw.githubusercontent.com/memorycolors/Responsive/main/src/data/MOCK_DATA%20.json');
   }
 
   

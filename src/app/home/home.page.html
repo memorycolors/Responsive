@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Listado de perosnas personalizada
+      Ciudadanos del mundo
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -18,9 +18,9 @@
             <img [src]="user.avatar">
           </ion-avatar>
           <ion-card-title class="nombre"> {{user.first_name}} {{user.last_name}}</ion-card-title>
-          <h2 class="info">{{user.country}}</h2>
-          <h3 class=email >{{user.email}}</h3>
-          <p class="texto">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vitae purus non sapien finibus pharetra vitae id elit. Donec a ex at velit consectetur mattis at sed justo.</p>
+            <h2 class="info">{{user.country}}</h2>
+            <h3 class=ciudad >{{user.city}}</h3>
+            <p class="texto">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vitae purus non sapien finibus pharetra vitae id elit. Donec a ex at velit consectetur mattis at sed justo.</p>
         </ion-card-content>
       </ion-card>
       </ion-col>
